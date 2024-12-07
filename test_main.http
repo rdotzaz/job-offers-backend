@@ -1,0 +1,59 @@
+# Test your FastAPI endpoints
+
+GET http://127.0.0.1:8000/
+Accept: application/json
+
+###
+
+GET http://127.0.0.1:8000/offers?city=Wroclaw,Krakow&position=kelner
+apiKey: 13f1b867b86c5a86b1095ca36285714d0c913e049a19958d9d2157ef99117921
+Accept: application/json
+###
+
+POST http://127.0.0.1:8000/offers
+apiKey: 13f1b867b86c5a86b1095ca36285714d0c913e049a19958d9d2157ef99117921
+Content-Type: application/json
+
+{
+    "position": "mlynarz",
+    "phoneNumber": "+48666666666",
+    "email": "offer_2@gmail.com",
+    "description": "nice description",
+    "city": "Krakow"
+}
+
+###
+
+GET http://127.0.0.1:8000/offers/8l900qvww1FA5wIGpxLA
+apiKey: 13f1b867b86c5a86b1095ca36285714d0c913e049a19958d9d2157ef99117921
+Accept: application/json
+
+
+###
+POST https://127.0.0.1:8000/login/
+Content-Type: application/json
+
+{
+  "username": "test123",
+  "password": "123test"
+}
+
+###
+POST http://127.0.0.1:8000/register/
+Content-Type: application/json
+
+{
+  "username": "lslsa",
+  "password": "epepe321"
+}
+###
+
+GET http://127.0.0.1:8000/positionFilters
+Content-Type: application/json
+apiKey: 13f1b867b86c5a86b1095ca36285714d0c913e049a19958d9d2157ef99117921
+
+
+###
+GET http://127.0.0.1:8000/cityFilters
+Content-Type: application/json
+apiKey: 13f1b867b86c5a86b1095ca36285714d0c913e049a19958d9d2157ef99117921
